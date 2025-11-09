@@ -1,37 +1,21 @@
 {
-    "status": "success",
-    "users": [
-        {
-            "id": 1,
-            "name": "Saroj Adhikari",
-            "age": 25,
-            "email": "sarojadh1111@gmail.com",
-            "skills": [
-                "ReactJs",
-                "nodejs",
-                "tailwind",
-                "javascript"
-            ],
-            "address": {
-                "city": "Kathmandu",
-                "country": "Nepal"
-            }
-        }
-    ]
-
-    ,                 
-    "id": 2,
-    "name": "Sudip Kafle",
-    "age": 23,
-    "email": "sudipkafle@gmail.com",
-            "skills": [
-                "Html",
-                "css",
-                "js"
-            ],
-             "address": {
-                "city": "Chitwan",
-                "country": "India"
-            }
-        
+  "status": "success",
+  "user": [
+    {
+      "id": 1,
+      "name": "Saroj Adhikari",
+      "age": 25,
+      "email": "sarojadh1111@gmail.com",
+      "skills": ["ReactJs", "nodejs", "tailwind", "javascript"],
+      "address": { "city": "Kathmandu", "country": "Nepal" }
+    },
+    {
+      "id": 2,
+      "name": "Sudip Kafle",
+      "age": 23,
+      "email": "sudipkafle@gmail.com",
+      "skills": ["Html", "css", "js"],
+      "address": { "city": "Chitwan", "country": "India" }
+    }
+  ]
 }

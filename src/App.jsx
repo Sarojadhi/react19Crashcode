@@ -1,11 +1,16 @@
 import Welcome from './Component/Welcome'
+import UserCard from './props/UserCard'
+import UserList from './props/UserList'
+import data from './Data/Data.json'
 
 const App = () => {
   return (
     <>
-    <Welcome />
+    {/*<Welcome />*/}
+    {/* <UserCard user={data.user?.[0]} /> */}
+     <UserList />
     </>
   )
 }
 
-export default App
+export default App;
