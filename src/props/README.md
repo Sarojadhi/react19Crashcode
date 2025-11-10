@@ -33,3 +33,12 @@ Props enable composition of components for scalable applications.
 For dynamic behavior inside a component, state is used instead of props.
 
 Using props helps follow React’s one-way data flow principle.
+
+
+# Adding student.jsx .
+
+This is an example of props . 
+In this file i have given data through app.jsx (my detail)
+
+
+![alt text](image.png)
