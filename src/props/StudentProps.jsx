@@ -4,7 +4,7 @@ import React from 'react'
 const StudentProps = (props) => {
   return (
     <div>
-            <div className="flex flex-col items-center bg-gray-200 min-h-screen py-8">
+            <div className="m-4 p-5 flex flex-col items-center bg-gray-200 py-8">
         <h2 className="text-2xl font-bold mb-6">Student Props Component</h2>
         <p>Name: {props.name}</p>
         <p>Age : {props.age}</p>

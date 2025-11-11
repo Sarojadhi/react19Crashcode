@@ -4,7 +4,7 @@ const HideText = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div className=" text-center mt-4 mb-30 border-amber-1000 border-2 rounded-lg bg-gray-200 flex flex-col items-center">
+    <div className="m-4 p-5 text-center mt-4 mb-30 border-amber-1000 border-2 rounded-lg bg-gray-200 flex flex-col items-center">
       {show && <p>This is some text that can be hidden</p>}
       <button
         onClick={() => setShow(!show)}
