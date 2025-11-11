@@ -8,7 +8,7 @@ import HideText from './State/HideText'
 import InputBox from './State/InputBox'
 import TodoList from './State/TodoList'
 import AnimationDemo from './State/AnimationDemo'
-
+import DownArrow from './State/DownArrow'
 const App = () => {
   return (
     <>
@@ -21,6 +21,7 @@ const App = () => {
      <InputBox />
      <TodoList />
      <AnimationDemo />
+     <DownArrow />  
     </>
   )
 }
