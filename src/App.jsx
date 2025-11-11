@@ -7,6 +7,7 @@ import IncrementDecrement from './State/IncrementDecrement'
 import HideText from './State/HideText'
 import InputBox from './State/InputBox'
 import TodoList from './State/TodoList'
+import AnimationDemo from './State/AnimationDemo'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
      <HideText />
      <InputBox />
      <TodoList />
+     <AnimationDemo />
     </>
   )
 }
