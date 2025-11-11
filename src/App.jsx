@@ -6,6 +6,7 @@ import StudentProps from './props/studentProps'
 import IncrementDecrement from './State/IncrementDecrement'
 import HideText from './State/HideText'
 import InputBox from './State/InputBox'
+import TodoList from './State/TodoList'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
      <IncrementDecrement />
      <HideText />
      <InputBox />
+     <TodoList />
     </>
   )
 }
