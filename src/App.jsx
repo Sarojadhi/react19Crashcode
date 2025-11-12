@@ -9,6 +9,7 @@ import InputBox from './State/InputBox'
 import TodoList from './State/TodoList'
 import AnimationDemo from './State/AnimationDemo'
 import DownArrow from './State/DownArrow'
+import LogMessage from './Hook/UseEffect/LogMessage'
 const App = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const App = () => {
      <TodoList />
      <AnimationDemo />
      <DownArrow />  
+     <LogMessage />
     </>
   )
 }
