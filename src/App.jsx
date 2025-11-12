@@ -10,6 +10,8 @@ import TodoList from './State/TodoList'
 import AnimationDemo from './State/AnimationDemo'
 import DownArrow from './State/DownArrow'
 import LogMessage from './Hook/UseEffect/LogMessage'
+import TitleCount from './Hook/UseEffect/TitleCount'
+import FetchAPI from './Hook/UseEffect/FetchAPI'
 const App = () => {
   return (
     <>
@@ -24,6 +26,8 @@ const App = () => {
      <AnimationDemo />
      <DownArrow />  
      <LogMessage />
+    <TitleCount />
+     <FetchAPI />
     </>
   )
 }

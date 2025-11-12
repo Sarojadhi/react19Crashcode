@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TitleCounter = () => {
+const TitleCount = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const TitleCounter = () => {
   );
 };
 
-export default TitleCounter;
+export default TitleCount;
