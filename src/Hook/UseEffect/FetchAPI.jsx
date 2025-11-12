@@ -21,7 +21,7 @@ const FetchAPI = () => {
         {users.map((user) => (
           <li
             key={user.id}
-            className="m-2 p-4 border-b border-gray-500 rounded shadow-lg bg-white"
+            className="m-2 p-4 border-b-2 border-gray-900 rounded shadow-lg bg-white"
           >
             <p><strong>ID:</strong> {user.id}</p>
             <p><strong>Name:</strong> {user.name}</p>

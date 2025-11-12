@@ -12,6 +12,7 @@ import DownArrow from './State/DownArrow'
 import LogMessage from './Hook/UseEffect/LogMessage'
 import TitleCount from './Hook/UseEffect/TitleCount'
 import FetchAPI from './Hook/UseEffect/FetchAPI'
+import Timer from './Hook/UseEffect/Timer'
 const App = () => {
   return (
     <>
@@ -28,6 +29,7 @@ const App = () => {
      <LogMessage />
     <TitleCount />
      <FetchAPI />
+     <Timer />
     </>
   )
 }
