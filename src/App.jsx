@@ -13,6 +13,7 @@ import LogMessage from './Hook/UseEffect/LogMessage'
 import TitleCount from './Hook/UseEffect/TitleCount'
 import FetchAPI from './Hook/UseEffect/FetchAPI'
 import Timer from './Hook/UseEffect/Timer'
+import ThemeToggle from './Hook/UseEffect/Theme-Toggle'
 const App = () => {
   return (
     <>
@@ -30,6 +31,7 @@ const App = () => {
     <TitleCount />
      <FetchAPI />
      <Timer />
+     <ThemeToggle />
     </>
   )
 }

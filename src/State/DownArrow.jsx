@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-function DownArrow() {
+const DownArrow = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <motion.div
