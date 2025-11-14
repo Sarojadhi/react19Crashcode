@@ -1,0 +1,30 @@
+/*  import ComponentC from './ComponentC'
+const ComponentB = (props) => {
+  return (
+    <>
+<div className='m-4 p-5 border-2 border-black bg-slate-200'>
+    <div>ComponentB</div>
+      <ComponentC name={props.name} />
+      </div>
+      </>
+  )
+}
+
+export default ComponentB
+*/
+
+import React from "react";
+import ComponentC from "./ComponentC.jsx";
+
+const ComponentB = () => {
+  return (
+    <>
+      <div className="m-4 p-5 border-2 border-black bg-slate-200">
+        <div>ComponentB</div>
+        <ComponentC />
+      </div>
+    </>
+  );
+};
+
+export default ComponentB;
