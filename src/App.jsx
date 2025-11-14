@@ -14,6 +14,7 @@ import TitleCount from './Hook/UseEffect/TitleCount'
 import FetchAPI from './Hook/UseEffect/FetchAPI'
 import Timer from './Hook/UseEffect/Timer'
 import ThemeToggle from './Hook/UseEffect/Theme-Toggle'
+import ComponentA from './Hook/useContext/ComponentA'
 const App = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const App = () => {
      <FetchAPI />
      <Timer />
      <ThemeToggle />
+     <ComponentA />
     </>
   )
 }

@@ -1,7 +1,6 @@
 import { useState} from "react";
 
 const ThemeToggle = () => {
-  // 2️⃣ Dark mode state
   const [dark, setDark] = useState(false);
 
   
@@ -17,7 +16,7 @@ const ThemeToggle = () => {
 
   return (
     <div style={styles}>
-      <h1>React useState + useEffect Example</h1>
+      <h1>React useState </h1>
      {/* Dark Mode */}
       <div style={{ marginTop: "20px" }}>
         <button onClick={() => setDark(!dark)}>
