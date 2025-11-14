@@ -55,3 +55,6 @@ Sharing state: Use lifting state up or Context API.
 
 Q: Why can’t we just use regular variables instead of state in React?
 A: Regular variables don’t trigger re-rendering when they change, so the UI won’t update. State ensures React reactively updates the UI when values change.
+
+
+![alt text](image.png)
