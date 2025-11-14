@@ -54,3 +54,52 @@ Causes complexity and tightly-coupled components
 Avoid with Context API or global state
 
 ![alt text](image.png)
+
+
+
+
+
+# 📌 useContext 
+
+# 1. What is useContext?
+
+useContext is a React Hook that allows functional components to access data from a context without passing props through intermediate components.
+It solves the problem of props drilling by providing a global-like state for a specific subtree of components. 
+
+# 2. Why is useContext important?
+
+Eliminates the need for passing props down multiple layers
+
+Makes components more maintainable and readable
+
+Centralizes shared state for themes, authentication, language settings, etc.
+
+Simplifies communication between deeply nested components
+
+# 3. How does useContext work?
+
+First, you create a context with createContext()
+
+Then, you wrap the components that need access in a Provider
+
+Finally, any nested component can use useContext() to read the value
+
+#  4. When should you use useContext?
+
+Sharing global data like authenticated user info
+
+Theme toggling (dark/light mode)
+
+Language/translation settings
+
+Avoiding props drilling for frequently used state
+
+# 5. Limitations of useContext
+
+Changes in context re-render all consumers, which may affect performance
+
+Not meant for high-frequency updates (e.g., animations)
+
+Works best with small or medium-sized shared state; for complex state, consider Redux or Zustand.
+
+![alt text](image-1.png)
