@@ -14,13 +14,27 @@ import TitleCount from './Hook/UseEffect/TitleCount'
 import FetchAPI from './Hook/UseEffect/FetchAPI'
 import Timer from './Hook/UseEffect/Timer'
 import ThemeToggle from './Hook/UseEffect/Theme-Toggle'
-import ComponentA from './Hook/useContextc+ propDrilling/ComponentA'
+import ComponentA from './Hook/useContextPluspropDrilling/ComponentA'
 import Card from './Component/Card'
 import ThemeToggles from './Component/ThemeToggles'
+import { useState } from 'react'
+// Step components (from components folder)
+import Step1 from "./Component/Step1";
+import Step2 from "./Component/Step2";
+import Step3 from "./Component/Step3";
+import { FormProvider } from "./Hook/useContextPluspropDrilling/FormContext";
+
 const App = () => {
+  const [step, setStep] = useState(1);
   return (
     <>
+    
     {<Welcome />}
+     <ThemeToggles />
+      <div className="p-6">
+      <h1 className="text-3xl font-bold">Theme Switcher (useContext + Tailwind)</h1>
+     <Card />      
+    <div className='m-4 p-5 border-2 border-black bg-slate-100'>
     { <UserCard user={data.user?.[0]} /> }
      <UserList />
      <StudentProps name="Saroj Adhikari" age={22} isStudent={true} />
@@ -34,13 +48,17 @@ const App = () => {
     <TitleCount />
      <FetchAPI />
        <Timer />
-     <ComponentA />
-     <div className="p-6">
-      <h1 className="text-3xl font-bold">Theme Switcher (useContext + Tailwind)</h1>
-
-      <ThemeToggles />
-      <Card />
-    </div> 
+      <ThemeToggle />
+     <ComponentA />   
+    </div>
+    </div>
+    <FormProvider>
+      <div className="max-w-md mx-auto mt-10 p-4">
+        {step === 1 && <Step1 setStep={setStep} />}
+        {step === 2 && <Step2 setStep={setStep} />}
+        {step === 3 && <Step3 setStep={setStep} />}
+      </div>
+    </FormProvider>
     </> 
   )
 }

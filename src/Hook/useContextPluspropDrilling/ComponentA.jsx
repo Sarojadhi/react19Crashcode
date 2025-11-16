@@ -28,6 +28,7 @@ const ComponentA = () => {
     <>
       <div className="m-4 p-5 border-2 border-black bg-slate-200">
         <div>ComponentA</div>
+        <p>{`Hello ${User}`} </p>
         <UserContext.Provider value={User}>
           <ComponentB user={User} />
         </UserContext.Provider>
