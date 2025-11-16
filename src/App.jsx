@@ -23,6 +23,7 @@ import Step1 from "./Component/Step1";
 import Step2 from "./Component/Step2";
 import Step3 from "./Component/Step3";
 import { FormProvider } from "./Hook/useContextPluspropDrilling/FormContext";
+import SimpleWay from './Hook/useReducer/SimpleWay'
 
 const App = () => {
   const [step, setStep] = useState(1);
@@ -59,6 +60,7 @@ const App = () => {
         {step === 3 && <Step3 setStep={setStep} />}
       </div>
     </FormProvider>
+    <SimpleWay />
     </> 
   )
 }
