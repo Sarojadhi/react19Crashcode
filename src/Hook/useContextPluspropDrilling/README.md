@@ -103,3 +103,11 @@ Not meant for high-frequency updates (e.g., animations)
 Works best with small or medium-sized shared state; for complex state, consider Redux or Zustand.
 
 ![alt text](image-1.png)
+
+
+Take input form FormContext 
+FormContext can be used to take details for Form ,
+one of the image is given below : 
+
+
+![alt text](image-3.png)
