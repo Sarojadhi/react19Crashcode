@@ -24,12 +24,15 @@ import Step2 from "./Component/Step2";
 import Step3 from "./Component/Step3";
 import { FormProvider } from "./Hook/useContextPluspropDrilling/FormContext";
 import SimpleWay from './Hook/useReducer/SimpleWay'
+import Saroj from './Hook/UseEffect/Saroj'
+
 
 const App = () => {
   const [step, setStep] = useState(1);
   return (
     <>
-    
+        <Saroj />
+
     {<Welcome />}
      <ThemeToggles />
       <div className="p-6">
