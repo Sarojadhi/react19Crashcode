@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import Welcome from './Component/Welcome'
 import UserCard from './props/UserCard'
 import UserList from './props/UserList'
@@ -24,15 +25,34 @@ import Step2 from "./Component/Step2";
 import Step3 from "./Component/Step3";
 import { FormProvider } from "./Hook/useContextPluspropDrilling/FormContext";
 import SimpleWay from './Hook/useReducer/SimpleWay'
-import Saroj from './Hook/UseEffect/Saroj'
+// import Saroj from './Hook/UseEffect/Saroj'
+ // import HeaderWithReactRouter from "./HeaderWithReactRouter";
+import ABOUT from './ReactRouter/ABOUT.jsx';
+import CONTACT from './ReactRouter/CONTACT.jsx';
+import HOME from './ReactRouter/HOME.jsx';
+import Navbar from './ReactRouter/NavBar.jsx';
 
 
 const App = () => {
   const [step, setStep] = useState(1);
   return (
     <>
-        <Saroj />
+       {/*<Saroj />*/} 
 
+
+         <Navbar />
+
+      <div className="pt-20 px-6">
+        <Routes>
+          <Route path="/" element={<HOME />} />
+          <Route path="/about" element={<ABOUT />} />
+          <Route path="/services" element={<h1>Services Page</h1>} />
+          <Route path="/contact" element={<CONTACT />} />
+        </Routes>
+      </div>
+
+
+       
     {<Welcome />}
      <ThemeToggles />
       <div className="p-6">
@@ -64,6 +84,9 @@ const App = () => {
       </div>
     </FormProvider>
     <SimpleWay />
+    <ABOUT />
+    <CONTACT /> 
+    <HOME />
     </> 
   )
 }

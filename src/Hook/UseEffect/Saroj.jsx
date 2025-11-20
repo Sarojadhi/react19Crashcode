@@ -1,7 +1,20 @@
 import { useState, useEffect } from "react";
 
 const Saroj = () => {
-  const text = "Saroj Adhikari \n- Full Stack Developer |\n React Enthusiast|\n Tech Blogger |\n Open Source Contributor |\n Lifelong Learner |\n Problem Solver |\n Passionate Coder |\n Innovator |\n Team Player |\n Tech Community Advocate |\n Always Exploring New Horizons! ";
+const text = `
+  Saroj Adhikari
+- Full Stack Developer |
+  React Enthusiast |
+  Tech Blogger |
+  Open Source Contributor |
+  Lifelong Learner |
+  Problem Solver |
+  Passionate Coder |
+  Innovator |
+  Team Player |
+  Tech Community Advocate |
+  Always Exploring New Horizons!
+`;
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
