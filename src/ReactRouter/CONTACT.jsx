@@ -6,7 +6,7 @@ const CONTACT = () => {
       <div>CONTACT</div>
       <p>This is Contact page </p>
       <nav className="flex gap-4 mb-6">
-        <Link to="email" className="text-blue-500">
+        <Link to="" className="text-blue-500">
           Email
         </Link>
         <Link to="phone" className="text-blue-500">

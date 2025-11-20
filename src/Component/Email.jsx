@@ -1,12 +1,24 @@
-import React from 'react'
+import React from "react";
 
 const Email = () => {
   return (
-    <>
-      <div>EMAIL</div>
-      <p>This is Email page </p>
-    </>
-  )
-}
+    <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+      
+     
+      <h2 className="text-3xl font-bold text-center text-blue-600 mb-2">
+        EMAIL
+      </h2>
 
-export default Email
+      
+      <hr className="border-t-2 border-gray-300 mb-4" />
+
+      
+      <p className="text-gray-700 text-lg text-center">
+        This is the Email page. You can contact us at{" "}
+        <span className="font-semibold text-blue-500">example@gmail.com</span>.
+      </p>
+    </div>
+  );
+};
+
+export default Email;
