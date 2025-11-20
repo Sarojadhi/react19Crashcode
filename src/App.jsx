@@ -31,6 +31,9 @@ import ABOUT from './ReactRouter/ABOUT.jsx';
 import CONTACT from './ReactRouter/CONTACT.jsx';
 import HOME from './ReactRouter/HOME.jsx';
 import Navbar from './ReactRouter/NavBar.jsx';
+import Email from './Component/Email.jsx'
+import Phone from './Component/Phone.jsx'
+import Service from './ReactRouter/Service.jsx'
 
 
 const App = () => {
@@ -46,8 +49,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HOME />} />
           <Route path="/about" element={<ABOUT />} />
-          <Route path="/services" element={<h1>Services Page</h1>} />
-          <Route path="/contact" element={<CONTACT />} />
+          <Route path="/services" element={<Service />} />
+
+
+          <Route path="/contact" element={<CONTACT />} >
+          <Route path='email' element={<Email />} />
+          <Route path='phone' element={<Phone />} />
+          </Route>
+          <Route path='*' element={<h2 className="text-center text-red-600 font-serif font-bold text-4xl"> 404 <br /> Page Not Found</h2>}   />
         </Routes>
       </div>
 
