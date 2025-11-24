@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  // Check if user is logged in
+  const user = JSON.parse(localStorage.getItem("user"));
+  const isLoggedIn = user?.isAuthenticated;
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+    window.location.reload(); // refresh App.jsx state
+  };
 
   return (
     <>
@@ -37,11 +48,21 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-6 text-lg font-medium">
+          <ul className="hidden md:flex space-x-6 text-lg font-medium items-center">
             <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
             <li><Link to="/about" className="hover:text-blue-600">About</Link></li>
             <li><Link to="/services" className="hover:text-blue-600">Services</Link></li>
             <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>
+            {isLoggedIn && (
+              <li>
+                <button
+                  onClick={handleLogout}
+                  className="bg-red-600 px-3 py-1 rounded text-white"
+                >
+                  Logout
+                </button>
+              </li>
+            )}
           </ul>
         </div>
 
@@ -61,9 +82,19 @@ const Navbar = () => {
             <li className="border-b py-3">
               <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
             </li>
-            <li className="py-3">
+            <li className="border-b py-3">
               <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
             </li>
+            {isLoggedIn && (
+              <li className="py-3">
+                <button
+                  onClick={handleLogout}
+                  className="bg-red-600 px-3 py-1 rounded text-white w-full text-left"
+                >
+                  Logout
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
