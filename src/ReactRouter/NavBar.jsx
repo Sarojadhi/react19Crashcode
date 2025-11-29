@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import AddToSlice from "../Redux/AddToSlice";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -53,6 +54,7 @@ const Navbar = () => {
             <li><Link to="/about" className="hover:text-blue-600">About</Link></li>
             <li><Link to="/services" className="hover:text-blue-600">Services</Link></li>
             <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>
+             <AddToSlice />
             {isLoggedIn && (
               <li>
                 <button
@@ -85,19 +87,23 @@ const Navbar = () => {
             <li className="border-b py-3">
               <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
             </li>
+              <AddToSlice />
             {isLoggedIn && (
               <li className="py-3">
                 <button
                   onClick={handleLogout}
-                  className="bg-red-600 px-3 py-1 rounded text-white w-full text-left"
+                  className=" bg-red-600 px-3 py-1 rounded text-white w-full text-left"
                 >
                   Logout
                 </button>
               </li>
             )}
+          
           </ul>
         </div>
+         
       </nav>
+      
     </>
   );
 };

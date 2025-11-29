@@ -54,6 +54,8 @@ import Step3 from "./Component/Step3.jsx";
 
 // USE REDUCER DEMO
 import SimpleWay from "./Hook/useReducer/SimpleWay.jsx";
+import Product from "./Redux/Product.jsx";
+import productData from "./Redux/ProductData.json";   
 
 const App = () => {
   const [step, setStep] = useState(1);
@@ -69,6 +71,12 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <div className="pt-20 px-6 bg-gray-100 min-h-screen">
+  {productData.map((product) => (
+    <Product key={product.id} productData={product} />
+  ))}
+</div>
+
 
       <div className="pt-20 px-6">
         <Routes>
@@ -93,7 +101,7 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-
+           
           <Route
             path="/admin"
             element={
@@ -104,7 +112,7 @@ const App = () => {
           />
         </Routes>
       </div>
-
+              {/* <Headers /> */}
       {/* EXTRA COMPONENTS */}
       <Welcome />
       <ThemeToggles />

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Headphones",
+    "price": 2999,
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "image": "https://imgs.search.brave.com/1lJNvU4j_lyvpYCzmbdFcEr1KfeaLBSuPRfnSmNo-rU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXVkaW8tdGVjaG5p/Y2EuY29tL21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS9j/NjczYmM3ZmVjODgw/OGE4MGQyMzkxODc0/MmIzZjMzOS9hL3Qv/YXRoLXMyMjBidGJr/XzAxXzEucG5n"
+  },
+  {
+    "id": 2,
+    "title": "Smart Watch",
+    "price": 4999,
+    "description": "Track your fitness and daily activities with ease.",
+    "image": "https://imgs.search.brave.com/Y4OPaBAJ1ysc6O4kmZPR3RBW7LF23JKs6WW15n4YrTs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxKzBOZVpNRCtM/LmpwZw"
+  },
+  {
+    "id": 3,
+    "title": "Bluetooth Speaker",
+    "price": 1999,
+    "description": "Portable and powerful sound for outdoor fun.",
+    "image": "https://imgs.search.brave.com/PZfHNcSZVYk5HYUfzdGetBNggtv-b_vG_kyzubhKrYQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDkv/MDg5Lzc5My9zbWFs/bC9jb21wYWN0LXBv/cnRhYmxlLWJsdWV0/b290aC1zcGVha2Vy/LWluLWEtY296eS1p/bmRvb3Itc2V0dGlu/Zy1kdXJpbmctZXZl/bmluZy1mcmVlLXBo/b3RvLmpwZWc"
+  }
+]
