@@ -54,8 +54,9 @@ import Step3 from "./Component/Step3.jsx";
 
 // USE REDUCER DEMO
 import SimpleWay from "./Hook/useReducer/SimpleWay.jsx";
-import Product from "./Redux/Product.jsx";
-import productData from "./Redux/ProductData.json";   
+
+// REDUX COMPONENTS
+import AllProduct from "./Redux/AllProduct.jsx";
 
 const App = () => {
   const [step, setStep] = useState(1);
@@ -70,14 +71,14 @@ const App = () => {
 
   return (
     <>
+      {/* NAVBAR + CART */}
       <Navbar />
+
+      {/* PRODUCTS */}
       <div className="pt-20 px-6 bg-gray-100 min-h-screen">
-  {productData.map((product) => (
-    <Product key={product.id} productData={product} />
-  ))}
-</div>
-
-
+        <AllProduct /> {/* Renders all products once */}
+      </div>
+      {/* ROUTES */}
       <div className="pt-20 px-6">
         <Routes>
           {/* PUBLIC ROUTES */}
@@ -101,7 +102,6 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-           
           <Route
             path="/admin"
             element={
@@ -112,11 +112,10 @@ const App = () => {
           />
         </Routes>
       </div>
-              {/* <Headers /> */}
+
       {/* EXTRA COMPONENTS */}
       <Welcome />
       <ThemeToggles />
-
       <div className="p-6">
         <h1 className="text-3xl font-bold">Theme Switcher (useContext)</h1>
         <Card />

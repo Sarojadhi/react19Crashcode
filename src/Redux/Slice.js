@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   count: 0,
-  items: []
+  items: [],
 };
 
 const cartSlice = createSlice({
@@ -10,19 +10,22 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      state.count += 1;
       state.items.push(action.payload);
+      state.count = state.items.length;
     },
     removeFromCart: (state, action) => {
-      state.count = state.count > 0 ? state.count - 1 : state.count;
-        state.items = state.items.filter(item => item.id !== action.payload.id);
+      state.items = state.items.filter(item => item.id !== action.payload.id);
+      state.count = state.items.length;
     },
     clearCart: (state) => {
       state.items = [];
       state.count = 0;
-    }
-  }
+    },
+    incrementCount: (state) => {
+      state.count += 1;  // for generic cart icon increment
+    },
+  },
 });
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart, incrementCount } = cartSlice.actions;
 export default cartSlice.reducer;

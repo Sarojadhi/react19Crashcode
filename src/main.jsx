@@ -5,7 +5,8 @@ import './index.css'
 import { ThemeProvider } from './Hook/useContextPluspropDrilling/ThemeContext.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
-import { store } from './Redux/Store.js';
+// import { store } from './Redux/Store.js';
+import store from './Redux/Store';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <React.StrictMode>
