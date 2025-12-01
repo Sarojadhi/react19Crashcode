@@ -23,7 +23,6 @@ const ProductSlice = createSlice({
         state.status = "success";
         state.item = action.payload;
       })
-     
   },
 });
 

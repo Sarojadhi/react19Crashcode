@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart, clearCart } from "./Slice";
-import { fetchProduct } from "./ProductSlice"; // if you are fetching products from API
+import { fetchProduct } from "./ProductSlice"; 
 
 const AllProduct = () => {
   const dispatch = useDispatch();
 
-  // Fetch products if you are using ProductSlice
   useEffect(() => {
     dispatch(fetchProduct());
   }, [dispatch]);
@@ -21,7 +20,8 @@ const AllProduct = () => {
 
   return (
     <>
-      <div className="flex items-center gap-6 p-4">
+      <div className="flex items-center gap-6 p-4 justify-center ">
+       <span className="text-lg  font-bold border-2 border-black p-2 rounded-lg bg-indigo-700 text-sky-100 hover:bg-indigo-900"> Shopping Cart:</span> 
         <button
           onClick={() => dispatch(clearCart())}
           className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition"
@@ -44,8 +44,11 @@ const AllProduct = () => {
               />
               <h3 className="text-lg font-bold mt-3">{prod.title}</h3>
               <p className="text-green-600 font-semibold">Rs. {prod.price}</p>
+              <p className="text-black-700">Rating : <span className="text-black-900">{prod.rating}</span></p>
               <p className="text-gray-600 mt-1">
-                Quantity: {getQuantity(prod.id)}
+                
+                Quantity: <span className="text-black-700 font-bold">{getQuantity(prod.id)}</span>
+                
               </p>
 
               {/* Buttons */}
@@ -60,7 +63,7 @@ const AllProduct = () => {
                 <button
                   onClick={() => dispatch(removeFromCart(prod))}
                   className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg shadow-md"
-                  disabled={getQuantity(prod.id) === 0} // disable if none in cart
+                  disabled={getQuantity(prod.id) === 0} 
                 >
                   Remove from cart 
                 </button>
