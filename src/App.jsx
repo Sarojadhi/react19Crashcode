@@ -58,6 +58,10 @@ import SimpleWay from "./Hook/useReducer/SimpleWay.jsx";
 // REDUX COMPONENTS
 import AllProduct from "./Redux/AllProduct.jsx";
 
+// RADIX DAY NIGHT THEME TOGGLE
+import DayNight from "./Radix/DayNight.jsx";
+
+
 const App = () => {
   const [step, setStep] = useState(1);
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -68,15 +72,15 @@ const App = () => {
   if (!isLoggedIn) {
     return <Login setIsLoggedIn={setIsLoggedIn} />;
   }
-
   return (
     <>
       {/* NAVBAR + CART */}
       <Navbar />
-
+      {/* DAY NIGHT THEME TOGGLE */}
+      <DayNight />
       {/* PRODUCTS */}
       <div className="pt-20 px-6 bg-gray-100 min-h-screen">
-        <AllProduct /> {/* Renders all products once */}
+        <AllProduct /> 
       </div>
       {/* ROUTES */}
       <div className="pt-20 px-6">
