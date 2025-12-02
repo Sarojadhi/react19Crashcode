@@ -61,6 +61,8 @@ import AllProduct from "./Redux/AllProduct.jsx";
 // RADIX DAY NIGHT THEME TOGGLE
 import DayNight from "./Radix/DayNight.jsx";
 
+// AXIOS DEMO 
+import Movie from "./Axios/Movie.jsx";
 
 const App = () => {
   const [step, setStep] = useState(1);
@@ -76,6 +78,8 @@ const App = () => {
     <>
       {/* NAVBAR + CART */}
       <Navbar />
+      {/* Axios Api Movie*/}
+      <Movie />
       {/* DAY NIGHT THEME TOGGLE */}
       <DayNight />
       {/* PRODUCTS */}
