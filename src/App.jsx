@@ -64,6 +64,9 @@ import DayNight from "./Radix/DayNight.jsx";
 // AXIOS DEMO 
 import Movie from "./Axios/Movie.jsx";
 
+// React Form Hook 
+import ReactForm from "./REACT-HOOK-FORM/ReactForm.jsx";
+
 const App = () => {
   const [step, setStep] = useState(1);
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -78,15 +81,27 @@ const App = () => {
     <>
       {/* NAVBAR + CART */}
       <Navbar />
+
+      {/*React hook form  */}
+
+      <ReactForm />
+
       {/* Axios Api Movie*/}
+
       <Movie />
+
       {/* DAY NIGHT THEME TOGGLE */}
+
       <DayNight />
-      {/* PRODUCTS */}
+
+      {/* PRODUCTS */}\
+
       <div className="pt-20 px-6 bg-gray-100 min-h-screen">
         <AllProduct /> 
       </div>
+
       {/* ROUTES */}
+
       <div className="pt-20 px-6">
         <Routes>
           {/* PUBLIC ROUTES */}
