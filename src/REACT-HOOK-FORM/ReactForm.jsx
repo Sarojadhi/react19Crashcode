@@ -28,6 +28,7 @@ const ReactForm = () => {
           <label className="mb-1 font-medium">First Name</label>
           <input
             {...register("firstName")}
+            type="text"
             onKeyDown={handleEnter}
             className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter first name"
@@ -37,7 +38,8 @@ const ReactForm = () => {
         <div className="flex flex-col">
           <label className="mb-1 font-medium">Middle Name</label>
           <input
-            {...register("MiddleName")}
+            {...register("MiddleName", { required: true, maxLength: 20 })}
+            type="text"
             onKeyDown={handleEnter}
             className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter middle name"
@@ -47,10 +49,31 @@ const ReactForm = () => {
         <div className="flex flex-col">
           <label className="mb-1 font-medium">Last Name</label>
           <input
-            {...register("LastName")}
+            {...register("LastName", { required: true, maxLength: 20 })}
+            type="text"
             onKeyDown={handleEnter}
             className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter last name"
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <label className="mb-1 font-medium">Password</label>
+          <input
+            {...register("password", { pattern: /^[A-Za-z]+$/i })}
+            type="password"
+            onKeyDown={handleEnter}
+            className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter Password"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label className="mb-1 font-medium">Age</label>
+          <input
+            type="number"
+            {...register("age", { min: 18, max: 99 })}
+            placeholder="Enter your age"
+            className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
